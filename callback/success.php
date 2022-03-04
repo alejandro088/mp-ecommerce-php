@@ -20,28 +20,28 @@
 
         <script
             src="https://www.mercadopago.com/v2/security.js"
-            view="item"
+            view=""
         ></script>
 
         <link
             rel="stylesheet"
-            href="./assets/category-landing.css"
+            href="../assets/category-landing.css"
             media="screen, print"
         />
 
         <link
             rel="stylesheet"
-            href="./assets/category.css"
+            href="../assets/category.css"
             media="screen, print"
         />
 
         <link
             rel="stylesheet"
-            href="./assets/merch-tools.css"
+            href="../assets/merch-tools.css"
             media="screen, print"
         />
 
-        <link rel="stylesheet" href="./assets/fonts" media="" />
+        <link rel="stylesheet" href="../assets/fonts" media="" />
         <style>
             .as-filter-button-text {
                 font-size: 26px;
@@ -136,7 +136,7 @@
                                 <div class="pd-l-plate-scale">
                                     <div class="pd-billboard-background">
                                         <img
-                                            src="./assets/music-audio-alp-201709"
+                                            src="../assets/music-audio-alp-201709"
                                             alt=""
                                             width="1440"
                                             height="320"
@@ -161,7 +161,6 @@
                     id="as-search-results"
                 >
                     <div id="accessories-tab" class="as-accessories-details">
-                        <form>
                         <div class="as-accessories" id="as-accessories">
                             <div class="as-accessories-header">
                                 <div class="as-search-results-count">
@@ -189,7 +188,7 @@
                                             type="button"
                                         >
                                             <h2 class="as-filter-button-text">
-                                                Smartphones
+                                                Su pago fue aprobado con éxito!
                                             </h2>
                                         </button>
                                     </div>
@@ -230,20 +229,7 @@
                                                         class="as-tilegallery-element as-image-selected"
                                                     >
                                                         <div class=""></div>
-                                                        <img
-                                                            src="./assets/003.jpg"
-                                                            class="ir ir item-image as-producttile-image"
-                                                            alt=""
-                                                            width="445"
-                                                            height="445"
-                                                            style="
-                                                                content: -webkit-image-set(
-                                                                    url(<?php echo $_POST['img']?>)
-                                                                        2x
-                                                                );
-                                                            "
-                                                        />
-                                                        <input type="hidden" name="img" value="<?php echo $_POST['img']?>" />
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -258,38 +244,23 @@
                                             class="as-producttile-titlepricewraper"
                                             style="min-height: 128px"
                                         >
-                                            <div class="as-producttile-title">
-                                                <h3 class="as-producttile-name">
-                                                    <p
-                                                        class="as-producttile-tilelink"
-                                                    >
-                                                        <span
-                                                            data-ase-truncate="2"
-                                                            ><?php echo $_POST['title'] ?></span
-                                                        >
-                                                        <input type="hidden" name="title" value="<?php echo $_POST['title'] ?>">
-                                                    </p>
-                                                </h3>
-                                            </div>
+                                            
                                             <h3>
-                                                <?php echo "$" . $_POST['price'] ?>
-                                                <input type="hidden" name="price" value="<?php echo $_POST['price'] ?>">
+                                                Payment Type: <?php echo $_GET['payment_type'] ?>
                                             </h3>
+                                            <h3>
+                                                Payment ID: <?php echo $_GET['payment_id'] ?>
+                                            </h3>
+                                            <h3>
+                                                External reference: <?php echo $_GET['external_reference'] ?>
+                                            </h3>
+                                            
                                         </div>
-                                        <button
-                                            type="submit"
-                                            class="mercadopago-button"
-                                            formmethod="post"
-                                            formaction="/app/checkout.php"
-                                        >
-                                            Pagar
-                                        </button>
                                         
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </form>
                     </div>
                 </div>
             </div>
@@ -331,7 +302,6 @@
                 ></circle>
             </svg>
         </div>
-       
         <div id="ac-gn-viewport-emitter"></div>
     </body>
 </html>
