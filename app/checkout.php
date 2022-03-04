@@ -47,7 +47,7 @@ $preference->payment_methods = array(
     ),
     "installments" => 6
   );
-$preference->external_reference = "ale_16_ar@yahoo.com";
+$preference->external_reference = "alejandro.cayssials@gmail.com";
 $preference->auto_return = "approved";
 $preference->notification_url = "https://webhook.site/1414c486-a87a-486a-b0a4-66c1e4d04d05";
 $preference->back_urls = array(
