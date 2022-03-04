@@ -4,23 +4,18 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 // Agrega credenciales
-MercadoPago\SDK::setAccessToken('APP_USR-1528238197130713-091518-72bcebb57cdd4eb5fad2a6ee977553bb-825016037');
+MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398');
+MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
 
-
-var_dump($_POST);
-
-// remove fist character $_POST['img']
 $img = substr($_POST['img'], 1);
-
-var_dump($_SERVER['HTTP_HOST'] . $img);
 
 // Crea un objeto de preferencia
 $preference = new MercadoPago\Preference();
 
 $payer = new MercadoPago\Payer();
-$payer->email = "test_user_6831084@testuser.com";
+$payer->email = "test_user_63274575@testuser.com";
 $payer->name = "Lalo";
 $payer->surname = "Landa";
 $payer->phone = array(
@@ -63,4 +58,4 @@ $preference->back_urls = array(
 $preference->save();
 
 // redirecciona a la página de pago
-header("Location: " . $preference->init_point);
+//header("Location: " . $preference->init_point);
